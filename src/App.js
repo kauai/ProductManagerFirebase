@@ -20,11 +20,11 @@ class App extends Component {
     }
 
     postNewComent(coment){
+        const coments = {...this.state.coments} 
+        const timestamp = Date.now()
+        coments[timestamp] = coment
         this.setState({
-            coments:{
-               ...this.state.coments,
-               [Date.now()]:coment
-            }
+            coments:coments
         })
 
     }
