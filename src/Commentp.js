@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
 
-class Commentp extends Component {
-
-    render(){
+const Commentp = ({coment}) => {
         return(
-            <p className="alert alert-warning">{this.props.coment.coment}</p>
+            <p className="alert alert-warning">{coment.coment}</p>
         )
-    }
 }
   
 export default Commentp
