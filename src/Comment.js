@@ -6,6 +6,7 @@ class Coments extends Component {
         return (
             <div>
                 <p>Renderizar comentarios aqui!!!</p>
+                <p class="alert alert-info">{JSON.stringify(this.props.coments)}</p>
             </div>
             
         );
