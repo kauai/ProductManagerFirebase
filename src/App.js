@@ -8,21 +8,32 @@ class App extends Component {
         super(props)
         this.state = {
             coments:{
-                "1":{
-                    coment:"first comment"
-                },
-                "2":{
-                    coment:"second comment"
-                }
+                    "1":{
+                        coment:"first comment"
+                    },
+                    "2":{
+                        coment:"second comment"
+                    }
             }
         }
+        this.postNewComent = this.postNewComent.bind(this);
+    }
+
+    postNewComent(coment){
+        this.setState({
+            coments:{
+               ...this.state.coments,
+               [Date.now()]:coment
+            }
+        })
+
     }
 
     render() {
         return (
             <div className="container">
                 <h1 className="text-center alert alert-success">Defininfo o app</h1>
-                <NewComent/>
+                <NewComent postNewComent={this.postNewComent}/>
                 <Coment coments={this.state.coments}/>
             </div>
         )
