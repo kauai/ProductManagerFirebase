@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 class NewComent extends Component {
+
     constructor(){
         super()
         this.handleEnter = this.handleEnter.bind(this);
@@ -12,9 +13,11 @@ class NewComent extends Component {
                 coment:this.refs.coment.value
             })
             this.refs.coment.value = ''
-        e.preventDefault()
+            e.preventDefault()
        }
    }
+
+
     render() {
         return (
             <div className="row">
