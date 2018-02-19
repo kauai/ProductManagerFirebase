@@ -10,7 +10,6 @@ class Coments extends Component {
     render() {
         return (
             <div>
-                <p>Renderizar comentarios aqui!!!</p>
                     {Object.keys(this.props.coments).map(item => {
                         return this.renderComment(item,this.props.coments[item])
                     })}
