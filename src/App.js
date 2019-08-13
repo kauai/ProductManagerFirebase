@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React ,{Component} from 'react'
-import React, { Component } from 'react';
 import 'bootstrap-css-only'
 import NewComent from './NewComent'
 import Coment from './Comment'
